@@ -7,7 +7,9 @@ export default {
   theme: {
     colors: {
       black: "#1e1e1e",
-      white: "#fefefe"
+      white: "#fefefe",
+      grey: "#a7a7a0",
+      spotifyGreen: "#1DB954"
     },
     fontFamily: {
       sans: ["Poppins", "sans-serif"]
