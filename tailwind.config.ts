@@ -9,7 +9,8 @@ export default {
       black: "#1e1e1e",
       white: "#fefefe",
       grey: "#a7a7a0",
-      spotifyGreen: "#1DB954"
+      spotifyGreen: "#1DB954",
+      red: "#ff0033"
     },
     fontFamily: {
       sans: ["Poppins", "sans-serif"]

@@ -13,8 +13,11 @@
 		<li>
 			<a href="/cnt">CnT</a>
 		</li>
+		<li>
+			<a href="/tuner">Tuner</a>
+		</li>
 	</ul>
-	{#if currentUser}
-		<p>Logged In</p>
+	{#if currentUser.user}
+		<p>Log Out</p>
 	{/if}
 </nav>
