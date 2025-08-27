@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
+
+:root {
+	--black: #1f1f1f;
+	--text: #f1f1f1;
+	--card-background: lightgrey;
+}
+
+body {
+	background-color: var(--black);
+	color: var(--text);
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+ul {
+	list-style: none;
+}
+
+
