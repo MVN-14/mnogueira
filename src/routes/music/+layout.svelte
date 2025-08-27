@@ -5,6 +5,7 @@
 <nav>
 	<ul>
 		<li><a href="/music/vinyl"> My Vinyl Collection </a></li>
+		<li><a href="/music/spotify"> My Spotify Data </a></li>
 	</ul>
 </nav>
 
@@ -21,6 +22,7 @@
 			display: flex;
 			justify-content: center;
 			padding: 0;
+			gap: 1em;
 			li {
 				border: solid 1px white;
 				border-radius: 1em;
