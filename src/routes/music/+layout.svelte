@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { page } from "$app/state"
 	let { children } = $props();
 </script>
 
 <nav>
 	<ul>
-		<li><a href="/music/vinyl"> My Vinyl Collection </a></li>
-		<li><a href="/music/spotify"> My Spotify Data </a></li>
+		<li class:active={page.route.id?.includes("vinyl")} ><a href="/music/vinyl"> My Vinyl Collection </a></li>
+		<li class:active={page.route.id?.includes("spotify")} ><a href="/music/spotify"> My Spotify Data </a></li>
 	</ul>
 </nav>
 
@@ -28,6 +29,10 @@
 				border-radius: 1em;
 				width: max-content;
 				padding: 0.5em;
+			}
+			.active {
+				background: grey;
+				color: var(--black);
 			}
 		}
 	}

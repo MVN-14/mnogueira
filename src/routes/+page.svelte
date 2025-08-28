@@ -146,20 +146,6 @@
 			}
 		}
 
-		.nf-linux-archlinux {
-			color: lightblue;
-		}
-		.nf-linux-neovim {
-			color: green;
-		}
-		.nf-dev-svelte {
-			color: #ff3e00;
-		}
-		.nf-fa-spotify {
-			color: #1ED760;
-		}
-		.nf-fa-record_vinyl {
-			color: grey;
-		}
+
 	}
 </style>

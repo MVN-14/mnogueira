@@ -30,4 +30,40 @@ ul {
 	list-style: none;
 }
 
+button {
+	background: none;
+	border: solid 1px white;
+	color: var(--text);
+	border-radius: 1em;
+	font-weight: bold;
+	padding: 0.6em;
+}
+button:hover {
+	cursor: pointer;
+	background: var(--text);
+	color: var(--black)
+}
+button.active {
+	background: grey;
+	color: var(--black);
+}
 
+.nf-linux-archlinux {
+	color: lightblue;
+}
+
+.nf-linux-neovim {
+	color: green;
+}
+
+.nf-dev-svelte {
+	color: #ff3e00;
+}
+
+.nf-fa-spotify {
+	color: #1ED760;
+}
+
+.nf-fa-record_vinyl {
+	color: grey;
+}
