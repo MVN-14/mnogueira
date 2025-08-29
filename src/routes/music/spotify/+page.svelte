@@ -33,26 +33,38 @@
 
 {#if view === "tracks"}
 	<ul>
-		{#each data.topTracks.items as track}
-			<li>
-				<SpotifyTrackView {track} />
-			</li>
-		{/each}
+		{#await data.topTracks}
+			<p class="loading">Loading Tracks...</p>
+		{:then tracks}
+			{#each tracks.items as track}
+				<li>
+					<SpotifyTrackView {track} />
+				</li>
+			{/each}
+		{/await}
 	</ul>
 {:else if view === "artists"}
-	<ul>
-		{#each data.topArtists.items as artist}
-			<li>
-				<SpotifyArtistView {artist} />
-			</li>
-		{/each}
-	</ul>
+	{#await data.topArtists}
+		<p class="loading">Loading Artists...</p>
+	{:then artists}
+		<ul>
+			{#each artists.items as artist}
+				<li>
+					<SpotifyArtistView {artist} />
+				</li>
+			{/each}
+		</ul>
+	{/await}
 {:else if view === "recent"}
-	<ul>
-		{#each data.recentlyPlayed.items.map(i => i.track) as recent}
-			<li><SpotifyTrackView track={recent} /></li>
-		{/each}
-	</ul>
+	{#await data.recentlyPlayed}
+		<p>Loading Recently Played...</p>
+	{:then recentlyPlayed}
+		<ul>
+			{#each recentlyPlayed.items.map((i) => i.track) as recent}
+				<li><SpotifyTrackView track={recent} /></li>
+			{/each}
+		</ul>
+	{/await}
 {/if}
 
 <style>
@@ -73,10 +85,15 @@
 		}
 	}
 
+	.loading {
+		font-size: 3em;
+		text-align: center;
+	}
+
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 2em;
+		gap: 1.5em;
 		li {
 			margin: 0 auto;
 			width: 500px;

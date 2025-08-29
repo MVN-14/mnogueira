@@ -14,16 +14,24 @@
 	<a id="discogsLink" href="https://discogs.com/user/michaelnogueira">view on discogs.com</a>
 
 	<div id="collectionInfo">
-		<p><strong>Maximum:</strong> {data.collectionValue.maximum}</p>
-		<p><strong>Median:</strong> {data.collectionValue.median}</p>
-		<p><strong>Minimum:</strong> {data.collectionValue.minimum}</p>
+		{#await data.collectionValue then value}
+		<p><strong>Maximum:</strong> {value.maximum}</p>
+		<p><strong>Median:</strong> {value.median}</p>
+		<p><strong>Minimum:</strong> {value.minimum}</p>
+		{/await}
 	</div>
-
+	
+	{#await data.collectionData}
+		<p id="collectionLoading">
+			Loading Collection...
+		</p>
+	{:then collection}
 	<ul>
-		{#each data.collectionData.releases as record}
+		{#each collection.releases as record}
 			<DiscogsRecordView {record} />
 		{/each}
 	</ul>
+	{/await}
 </div>
 
 <style>
@@ -45,6 +53,11 @@
 				color: grey;
 			}
 		}
+
+#collectionLoading{
+	font-size: 3em;
+	text-align: center;
+}
 
 		#collectionInfo {
 			display: flex;

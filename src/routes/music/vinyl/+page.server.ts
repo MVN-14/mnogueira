@@ -2,8 +2,8 @@ import { getCollection, getCollectionValue } from "$lib/discogs";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async () => {
-	const collection = await getCollection();
-	const value = await getCollectionValue();
+	const collection = getCollection();
+	const value = getCollectionValue();
 
 	return {
 		collectionData: collection,
