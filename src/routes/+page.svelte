@@ -1,4 +1,10 @@
+<script lang="ts">
+	import headshot from "$lib/assets/headshot.png"
+</script>
+
 <div id="container">
+
+	<img src={headshot} alt="headshot" width="300"/>
 	<h1>Welcome to my website</h1>
 
 	<p id="header">
