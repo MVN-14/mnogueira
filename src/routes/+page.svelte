@@ -140,6 +140,8 @@
 				display: flex;
 				flex-direction: column;
 				gap: 1em;
+				margin: 0 auto;
+				max-width: 75%;
 			}
 
 			p {

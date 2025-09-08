@@ -65,7 +65,7 @@
 	<li>
 		<div class="projectInfo">
 			<p class="link">
-				<a href="https://github.com/MVN-14/CAHClient" target="_blank"
+				<a href="https://cah.mnogueira.ca" target="_blank"
 					><strong>Clone Against Humanity</strong></a
 				>
 				<br />

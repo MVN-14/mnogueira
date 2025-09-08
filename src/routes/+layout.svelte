@@ -4,9 +4,24 @@
 	import favicon16 from "$lib/assets/favicon-16x16.png";
 	import manifest from "$lib/assets/site.webmanifest";
 	import "../app.css";
-	import { page } from "$app/state";
+
+	import Nav from "$lib/components/Nav.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 
 	let { children } = $props();
+
+	let menuItems = [
+		{
+			text: "Music",
+			href: "/music/vinyl",
+			activeMatch: "music",
+		},
+		{
+			text: "Projects",
+			href: "/projects",
+			activeMatch: "projects",
+		},
+	];
 </script>
 
 <svelte:head>
@@ -17,41 +32,18 @@
 	<link rel="manifest" href={manifest} />
 </svelte:head>
 
-<nav>
-	<ul>
-		<li>
-			<a href="/"> <strong>MNogueira</strong> </a>
-		</li>
-		<li class:active={page.route.id?.includes("music")}>
-			<a href="/music/vinyl"> Music </a>
-		</li>
-		<li class:active={page.route.id?.includes("projects")}>
-			<a href="/projects"> Projects </a>
-		</li>
-	</ul>
-</nav>
-{@render children?.()}
+<Nav {menuItems} />
+
+<div id="pageContainer">
+	{@render children?.()}
+</div>
+
+<Footer {menuItems} />
 
 <style>
-	nav {
-		font-size: 1.2em;
-		border-bottom: 1px solid var(--text);
-
-		ul {
-			padding: 0;
-			margin: 0;
-			display: flex;
-			gap: 1em;
-
-			li {
-				padding: 0.3em;
-			}
-		}
-
-		.active {
-			background: white;
-			color: var(--black);
-			font-weight: bold;
-		}
+	#pageContainer {
+		min-height: 80vh;
 	}
+
+
 </style>
