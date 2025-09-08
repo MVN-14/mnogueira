@@ -19,14 +19,17 @@
 		color: var(--black);
 		border-radius: 1em;
 		font-weight: 600;
+		max-width: 80vw;
 
 		img {
 			border-radius: 1em 0 0 1em;
+			height: 150px;
 		}
 		.info {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			width: 250px;
 			p {
 				margin: 0.2em;
 			}

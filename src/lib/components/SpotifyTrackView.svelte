@@ -24,11 +24,13 @@
 		color: var(--black);
 		border-radius: 1em;
 		font-weight: 600;
+		max-width: 80vw;
 
 		.info {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			width: 250px;
 			p {
 				margin: 0.2em;
 			}
