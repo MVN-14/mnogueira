@@ -4,7 +4,7 @@
 
 <div id="container">
 
-	<img src={headshot} alt="headshot" width="300"/>
+	<img src={headshot} alt="headshot" width="200"/>
 	<h1>Welcome to my website</h1>
 
 	<p id="header">
