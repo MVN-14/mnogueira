@@ -5,22 +5,40 @@
 	import SpotifyTrackView from "$lib/components/SpotifyTrackView.svelte";
 
 	let { data } = $props();
-	let view: "tracks" | "artists" | "recent" = $state("tracks");
+
+	function getSearchParam(key: string) {
+		return page.url.searchParams.get(key) ?? "";
+	}
+	function setSearchParam(key: string, value: string) {
+		let params = new URLSearchParams(page.url.searchParams)
+		params.set(key, value);
+		goto("?" + params.toString());
+	}
+
+	if (!page.url.searchParams.get("view")) {
+		page.url.searchParams.set("view", "tracks");
+	}
+
+	if (!page.url.searchParams.get("duration")) {
+		page.url.searchParams.set("duration", "medium_term");
+	}
 </script>
 
 <div id="container">
 	<div id="viewSelection">
 		<button
-			onclick={() => (view = "tracks")}
-			class:active={view === "tracks"}>Top Tracks</button
+			onclick={() => setSearchParam("view", "tracks")}
+			class:active={getSearchParam("view") === "tracks"}
+			>Top Tracks</button
 		>
 		<button
-			onclick={() => (view = "artists")}
-			class:active={view === "artists"}>Top Artists</button
+			onclick={() => setSearchParam("view", "artists")}
+			class:active={getSearchParam("view") === "artists"}
+			>Top Artists</button
 		>
 		<button
-			onclick={() => (view = "recent")}
-			class:active={view === "recent"}
+			onclick={() => setSearchParam("view", "recent")}
+			class:active={getSearchParam("view") === "recent"}
 		>
 			Recently Played
 		</button>
@@ -28,23 +46,23 @@
 
 	<div id="durationSelection">
 		<button
-			onclick={() => goto("?duration=short_term")}
-			class:active={page.url.searchParams.get("duration") ===
-				"short_term"}>Short Term</button
+			onclick={() => setSearchParam("duration", "short_term")}
+			class:active={getSearchParam("duration") === "short_term"}
+			>Short Term</button
 		>
 		<button
-			onclick={() => goto("?duration=medium_term")}
-			class:active={page.url.searchParams.get("duration") ===
-				"medium_term"}>Medium Term</button
+			onclick={() => setSearchParam("duration", "medium_term")}
+			class:active={getSearchParam("duration") === "medium_term"}
+			>Medium Term</button
 		>
 		<button
-			onclick={() => goto("?duration=long_term")}
-			class:active={page.url.searchParams.get("duration") === "long_term"}
+			onclick={() => setSearchParam("duration", "long_term")}
+			class:active={getSearchParam("duration") === "long_term"}
 			>Long Term</button
 		>
 	</div>
 
-	{#if view === "tracks"}
+	{#if getSearchParam("view") === "tracks"}
 		<ul>
 			{#await data.topTracks}
 				<p class="loading">Loading Tracks...</p>
@@ -56,7 +74,7 @@
 				{/each}
 			{/await}
 		</ul>
-	{:else if view === "artists"}
+	{:else if getSearchParam("view") === "artists"}
 		{#await data.topArtists}
 			<p class="loading">Loading Artists...</p>
 		{:then artists}
@@ -68,7 +86,7 @@
 				{/each}
 			</ul>
 		{/await}
-	{:else if view === "recent"}
+	{:else if getSearchParam("view") === "recent"}
 		{#await data.recentlyPlayed}
 			<p>Loading Recently Played...</p>
 		{:then recentlyPlayed}
