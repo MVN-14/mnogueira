@@ -7,7 +7,7 @@
 	<ul>
 		<li class:active={page.route.id?.includes("vinyl")} ><a href="/music/vinyl"> My Vinyl Collection </a></li>
 		<li class:active={page.route.id?.includes("spotify")} ><a href="/music/spotify"> My Spotify Data </a></li>
-		<li class:active={page.route.id?.includes("personal")} ><a href="/music/personal"> My Music </a></li>
+		<!-- <li class:active={page.route.id?.includes("personal")} ><a href="/music/personal"> My Music </a></li> -->
 	</ul>
 </nav>
 
