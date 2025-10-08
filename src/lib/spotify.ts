@@ -1,28 +1,18 @@
-const spotifyRequest = async (path: string, verb: string = "GET") => {
-	const response = await fetch("https://spotifapi.fly.dev/request", {
-		method: "POST",
-		body: JSON.stringify({
-			path,
-			verb
-		}),
-		headers: {
-			"Content-Type": "application/json"
-		}
-	})
-
-	return await response.json();
-}
+import { PUBLIC_SPOTIFAPI_URL } from "$env/static/public";
 
 export const getTopTracks = async (range: string = "long_term") => {
-	return await spotifyRequest(`/me/top/tracks?limit=50&time_range=${range}`) as TopTracksResponse;
+	const response = await fetch(PUBLIC_SPOTIFAPI_URL + `/user/top?type=tracks&time_range=${range}`)
+	return await response.json()
 }
 
 export const getTopArtists = async (range: string = "long_term") => {
-	return await spotifyRequest(`/me/top/artists?limit=50&time_range=${range}`) as TopArtistsResponse;
+	const response = await fetch(PUBLIC_SPOTIFAPI_URL + `/user/top?type=artists&time_range=${range}`)
+	return await response.json()
 }
 
 export const getRecentlyPlayed = async () => {
-	return await spotifyRequest(`/me/player/recently-played?limit=50`) as  RecentlyPlayedResponse;
+	const response = await fetch(PUBLIC_SPOTIFAPI_URL + '/user/recent')
+	return await response.json()
 }
 
 export type RecentlyPlayedResponse = {
