@@ -3,6 +3,7 @@
 	import { page } from "$app/state";
 	import SpotifyArtistView from "$lib/components/SpotifyArtistView.svelte";
 	import SpotifyTrackView from "$lib/components/SpotifyTrackView.svelte";
+    import { RecentlyPlayedResponse } from "$lib/spotify.js";
 
 	let { data } = $props();
 
@@ -88,8 +89,8 @@
 		{/await}
 	{:else if getSearchParam("view") === "recent"}
 		{#await data.recentlyPlayed}
-			<p>Loading Recently Played...</p>
-		{:then recentlyPlayed}
+			<p class="loading">Loading Recently Played...</p>
+		{:then recentlyPlayed: RecentlyPlayedResponse}
 			<ul>
 				{#each recentlyPlayed.items.map((i) => i.track) as recent}
 					<li><SpotifyTrackView track={recent} /></li>

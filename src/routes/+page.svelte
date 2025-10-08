@@ -103,11 +103,10 @@
 	#container {
 		text-align: center;
 		margin: auto;
-		padding: 2em;
 		max-width: 1000px;
 
 		h1 {
-			font-size: 3em;
+			/* font-size: 3em; */
 			font-weight: 600;
 			border-bottom: solid 2px white;
 			width: max-content;
@@ -118,21 +117,18 @@
 			max-width: 1000px;
 			margin: 0 auto;
 			font-weight: 500;
-			font-size: 2em;
+			font-size: clamp(14px, 5vw, 2em);
 			padding-bottom: 2em;
 		}
 
 		article {
 			border: solid 2px grey;
 			border-radius: 2em;
-			padding: 0 0.5em 0.5em 0.5em;
-			text-align: left;
 			margin-bottom: 4em;
 
 			h2 {
-				font-size: 2.5em;
 				padding: 0 0 0 0.5em;
-				font-weight: 600;
+				font-weight: 800;
 			}
 
 			ul {
@@ -146,10 +142,11 @@
 
 			p {
 				text-align: center;
-				font-size: 1.3em;
+				font-size: clamp(14px, 4vw, 1.3em);
 				padding: 0;
 				strong {
-					font-size: 1.3em;
+					font-size: clamp(14px, 4.5vw, 1.3em);
+					font-weight: 600;
 				}
 			}
 		}

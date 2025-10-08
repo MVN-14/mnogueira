@@ -28,14 +28,14 @@
 		background: var(--card-background);
 		color: var(--black);
 		font-weight: 600;
+		min-width: 350px;
+		width: 40vw;
+		min-height: 15vh;
 
 		img {
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
-		}
-
-		#info-container {
-			width: 250px;
+			height: 100%;
 		}
 	}
 </style>

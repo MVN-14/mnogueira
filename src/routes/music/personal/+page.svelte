@@ -2,10 +2,11 @@
 	const { data } = $props();
 </script>
 
+<section>
 <h1>My Music</h1>
 
 {#await data.videoList}
-	<p>Loading...</p>
+	<p id="loading">Loading...</p>
 {:then videoList} 
 <ul>	
 	{#each videoList.entries as video}
@@ -22,13 +23,19 @@
 {:catch error}
 	<p>{error}</p>
 {/await}
+</section>
 
 <style>
-	h1 {
+	section {
+		#loading {
+			font-size: 32px;
+		}
 		text-align: center;
-	}
-
-	li {
-		text-align: center;
+		h1 {
+			font-size: 32px;
+		}
+		ul {
+			padding: 0;
+		}
 	}
 </style>
