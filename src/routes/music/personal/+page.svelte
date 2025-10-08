@@ -4,8 +4,11 @@
 
 <h1>My Music</h1>
 
-<ul>
-	{#each data.videoList.entries as video}
+{#await data.videoList}
+	<p>Loading...</p>
+{:then videoList} 
+<ul>	
+	{#each videoList.entries as video}
 		<li>
 			<p>
 				<a
@@ -16,6 +19,9 @@
 		</li>
 	{/each}
 </ul>
+{:catch error}
+	<p>{error}</p>
+{/await}
 
 <style>
 	h1 {
