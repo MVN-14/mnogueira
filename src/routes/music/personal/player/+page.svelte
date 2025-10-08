@@ -1,13 +1,13 @@
 <script lang="ts">
     import { page } from "$app/state";
     import { onMount } from "svelte";
-	import { PUBLIC_API_URL } from "$env/static/public"
+	import { PUBLIC_DROPBOX_API_URL } from "$env/static/public"
 
 	const path = page.url.searchParams.get("path");
 
 	let video: HTMLVideoElement;
 	onMount(async () => {
-		const response = await fetch(`${PUBLIC_API_URL}/videos?path=${encodeURIComponent(path ?? "")}`);
+		const response = await fetch(`${PUBLIC_DROPBOX_API_URL}/videos?path=${encodeURIComponent(path ?? "")}`);
 		const blob = await response.blob();
 		video.src = URL.createObjectURL(blob);
 	});
