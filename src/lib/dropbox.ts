@@ -1,10 +1,10 @@
-import { PUBLIC_API_URL } from "$env/static/public";
+import { PUBLIC_DROPBOX_API_URL } from "$env/static/public";
 
 export const listVideos = async () => {
-	const response = await fetch(`${PUBLIC_API_URL}/videos/list`)
-	const body = await response.json()
-
-	return body as ListVideosResponse;
+	// const response = await fetch(`${PUBLIC_DROPBOX_API_URL}/videos/list`)
+	// const body = await response.json()
+	//
+	// return body as ListVideosResponse;
 }
 
 type ListVideosResponse = {
