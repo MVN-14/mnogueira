@@ -8,7 +8,8 @@
 	<h1>Welcome to my website</h1>
 
 	<p id="header">
-		My name is Michael Nogueira. I have a passion for tech and programming.
+		My name is Michael Nogueira. <br />
+		I have a passion for tech and programming.
 		I also love music.
 	</p>
 
@@ -105,8 +106,11 @@
 		margin: auto;
 		max-width: 1000px;
 
+		img {
+			margin-top: 2em;
+		}
+
 		h1 {
-			/* font-size: 3em; */
 			font-weight: 600;
 			border-bottom: solid 2px white;
 			width: max-content;
