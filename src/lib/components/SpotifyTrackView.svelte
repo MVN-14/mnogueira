@@ -24,7 +24,9 @@
 		color: var(--black);
 		border-radius: 1em;
 		font-weight: 600;
-		max-width: 80vw;
+		min-width: 350px;
+		width: 40vw;
+
 
 		.info {
 			display: flex;

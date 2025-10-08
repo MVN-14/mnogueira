@@ -68,10 +68,12 @@ margin: 0 auto;
 			gap: 2em;
 			justify-content: center;
 			padding: 1em;
+			text-align: center;
 		}
 
 		ul {
 			margin: 0 auto;
+			padding: 0;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
