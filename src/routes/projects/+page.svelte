@@ -35,7 +35,10 @@
 			</p>
 			<p>
 				This is a collection of webgames written with pure js web
-				components to learn how to use vanilla web components
+				components to learn how to use vanilla web components. <br />
+				<strong>
+				Current games - tic tac toe, wordle, and snake
+				</strong>
 			</p>
 		</div>
 	</li>

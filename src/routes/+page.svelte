@@ -19,6 +19,17 @@
 		<ul>
 			<li>
 				<p>
+					<a href="/projects"
+						><strong
+							><icon class="nf nf-cod-code"></icon> My Projects</strong
+						></a
+					>
+				</p>
+				<p>Some software projects that I tinker with</p>
+			</li>
+
+			<li>
+				<p>
 					<a href="/music/vinyl"
 						><strong
 							><icon class="nf nf-fa-record_vinyl"></icon> My Vinyl
