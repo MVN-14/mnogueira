@@ -3,7 +3,7 @@
 	import { page } from "$app/state";
 	import SpotifyArtistView from "$lib/components/SpotifyArtistView.svelte";
 	import SpotifyTrackView from "$lib/components/SpotifyTrackView.svelte";
-    import { RecentlyPlayedResponse } from "$lib/spotify.js";
+    import { type RecentlyPlayedResponse } from "$lib/spotify.js";
 
 	let { data } = $props();
 
