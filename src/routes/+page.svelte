@@ -1,16 +1,13 @@
 <script lang="ts">
-	import headshot from "$lib/assets/headshot.png"
+	import headshot from "$lib/assets/headshot.png";
 </script>
 
 <div id="container">
-
-	<img src={headshot} alt="headshot" width="200"/>
-	<h1>Welcome to my website</h1>
+	<img src={headshot} alt="headshot" width="200" />
 
 	<p id="header">
 		My name is Michael Nogueira. <br />
-		I have a passion for tech and programming.
-		I also love music.
+		I have a passion for tech and programming. I also love music.
 	</p>
 
 	<article>
@@ -165,7 +162,5 @@
 				}
 			}
 		}
-
-
 	}
 </style>
