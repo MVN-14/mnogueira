@@ -12,6 +12,9 @@
 			<p>{videoList.error}</p>
 		{:else}
 			<ul id="videoList">
+				<li>
+					<h1>More Videos</h1>
+				</li>
 				{#each videoList.entries as video}
 					<li>
 						<a
@@ -45,23 +48,35 @@
 			margin: 0 auto;
 			text-align: left;
 
-			a {
-				font-weight: bold;
-				display: flex;
-				align-items: center;
-				gap: 1em;
-				border-bottom: solid 1px white;
+			li {
+				border: solid 1px var(--accent);
+				color: var(--accent);
 
-				img {
-					width: 75px;
-					height: 75px;
-					object-fit: cover;
+				h1 {
+					margin: 0;
+					text-align: center;
+					padding: 0.3em;
+					font-size: 2em;
 				}
-			}
 
-			a:hover {
-				background: white;
-				color: black;
+				a {
+					color: var(--white);
+					font-weight: bold;
+					display: flex;
+					align-items: center;
+					gap: 1em;
+
+					img {
+						width: 75px;
+						height: 75px;
+						object-fit: cover;
+					}
+				}
+
+				a:hover {
+					background: var(--accent);
+					color: black;
+				}
 			}
 		}
 	}

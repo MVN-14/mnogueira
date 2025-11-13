@@ -1,7 +1,7 @@
 import { listVideos } from "$lib/dropbox";
-import type { PageServerLoad } from "./$types";
+import type { LayoutServerLoad } from "./$types";
 
-export const load: PageServerLoad = async () => {
+export const load: LayoutServerLoad = async () => {
 	const videoList = listVideos()
 
 	return {

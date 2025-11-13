@@ -24,7 +24,7 @@
 		{
 			text: "Github",
 			href: "https://github.com/MVN-14",
-			icon: "nf-cod-github",
+			icon: "nf-dev-github",
 			target: "_blank"
 		},
 	];

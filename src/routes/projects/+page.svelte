@@ -97,10 +97,13 @@
 	header {
 		text-align: center;
 		padding: 2em;
+
 		h1 {
 			font-size: 2.5em;
 			margin: 0;
+			color: var(--accent);
 		}
+
 		a {
 			font-size: 1.2em;
 		}
@@ -117,7 +120,7 @@
 		padding: 2em;
 		max-width: 800px;
 		margin: 0 auto;
-		border: solid 1px grey;
+		border: solid 1px var(--accent);
 		border-radius: 2em;
 		align-items: center;
 		display: flex;
@@ -130,6 +133,7 @@
 			.link {
 				font-size: 1.5em;
 				min-width: 250px;
+				color: var(--accent);
 			}
 			p {
 				margin: 0;
@@ -139,6 +143,7 @@
 
 		.projectLink {
 			font-size: 1em;
+			color: var(--accent);
 		}
 	}
 </style>

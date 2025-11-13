@@ -25,10 +25,12 @@
 <style>
 	nav {
 		font-size: 1.2em;
-		border-bottom: 1px solid var(--text);
+		border-bottom: 1px solid #add8e6;
 		display: flex;
 		justify-content: center;
 		font-weight: 500;
+		margin: 0 auto;
+		max-width: 1200px;	
 
 		ul {
 			padding: 0;
@@ -43,9 +45,13 @@
 		}
 
 		.active {
-			background: white;
+			background: #add8e6;
 			color: var(--black);
 			font-weight: bold;
+		}
+
+		.active :hover {
+			color: var(--black);
 		}
 	}
 </style>

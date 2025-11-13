@@ -3,24 +3,38 @@
 	import { onMount } from "svelte";
 	import { PUBLIC_DROPBOX_API_URL } from "$env/static/public";
 
-	let path = $state(page.url.searchParams.get("path"));
 	let isLoadingVideo = $state(true);
 
 	let video: HTMLVideoElement | undefined = $state();
 
-	onMount(async () => {
+	$effect(() => {
+		page.url.searchParams;
+		loadVideoFromPath();
+	});
+
+	async function loadVideoFromPath() {
 		if (!video) return;
+		video.src = "";
 		isLoadingVideo = true;
 		const response = await fetch(
-			`${PUBLIC_DROPBOX_API_URL}/videos?path=${encodeURIComponent(path ?? "")}`,
+			`${PUBLIC_DROPBOX_API_URL}/videos?path=${encodeURIComponent(page.url.searchParams.get("path") ?? "")}`,
 		);
 		const blob = await response.blob();
 		video.src = URL.createObjectURL(blob);
 		isLoadingVideo = false;
+	}
+
+	onMount(async () => {
+		loadVideoFromPath();
 	});
 </script>
 
-<h1>{path?.replace("/mymusic/video/", "").replace(".mp4", "")}</h1>
+<p id="title">
+	{page.url.searchParams
+		.get("path")
+		?.replace("/mymusic/video/", "")
+		.replace(".mp4", "")}
+</p>
 
 <div id="videoContainer">
 	<video controls bind:this={video}>
@@ -32,21 +46,23 @@
 </div>
 
 <style>
-	h1 {
+	#title {
+		font-weight: bold;
+		font-size: 1.7em;
 		text-align: center;
+		margin-top: 3em;
+		margin-bottom: 0.5em;
 	}
 
 	#videoContainer {
 		background: black;
 		display: flex;
 
-		margin-top: 3em;
-		margin-bottom: 3em;
+		max-width: 100vw;
 
 		video {
-			width: "100%";
-
-			height: auto;
+			width: auto;
+			height: 70%;
 			margin: 0 auto;
 		}
 	}

@@ -11,15 +11,12 @@
 	</p>
 
 	<article>
-		<h2>What's On This Site?</h2>
-
 		<ul>
 			<li>
 				<p>
 					<a href="/projects"
-						><strong
-							><icon class="nf nf-cod-code"></icon> My Projects</strong
-						></a
+						><icon class="nf nf-cod-code"></icon>
+						<strong> My Projects</strong></a
 					>
 				</p>
 				<p>Some software projects that I tinker with</p>
@@ -27,11 +24,9 @@
 
 			<li>
 				<p>
-					<a href="/music/vinyl"
-						><strong
-							><icon class="nf nf-fa-record_vinyl"></icon> My Vinyl
-							Collection</strong
-						></a
+					<a href="/music/vinyl">
+						<icon class="nf nf-fa-record_vinyl"></icon>
+						<strong> My Vinyl Collection</strong></a
 					>
 				</p>
 				<p>A list of my vinyl collection from Discogs.com</p>
@@ -39,10 +34,8 @@
 			<li>
 				<p>
 					<a href="/music/spotify">
-						<strong>
-							<icon class="nf nf-fa-spotify"></icon> My Spotify Listening
-							Habits
-						</strong>
+						<icon class="nf nf-fa-spotify"></icon>
+						<strong> My Spotify Listening Habits </strong>
 					</a>
 				</p>
 				<p>
@@ -54,7 +47,7 @@
 	</article>
 
 	<article>
-		<h2>Tech I Like</h2>
+		<h2>Tech I Use</h2>
 		<ul>
 			<li>
 				<p>
@@ -62,9 +55,8 @@
 						href="https://wiki.archlinux.org/title/Main_page"
 						target="_blank"
 					>
-						<strong>
-							<icon class="nf nf-linux-archlinux"></icon> Arch Linux
-						</strong>
+						<icon class="nf nf-linux-archlinux"></icon>
+						<strong> Arch Linux </strong>
 					</a>
 				</p>
 				<p>
@@ -77,9 +69,8 @@
 			<li>
 				<p>
 					<a href="https://neovim.io" target="_blank">
-						<strong
-							><icon class="nf nf-linux-neovim"></icon> NeoVim</strong
-						>
+						<icon class="nf nf-linux-neovim"></icon>
+						<strong> NeoVim </strong>
 					</a>
 				</p>
 				<p>
@@ -92,9 +83,8 @@
 			<li>
 				<p>
 					<a href="https://svelte.dev" target="_blank">
-						<strong
-							><icon class="nf nf-dev-svelte"></icon> Svelte</strong
-						>
+						<icon class="nf nf-dev-svelte"></icon>
+						<strong> Svelte </strong>
 					</a>
 				</p>
 				<p>
@@ -118,13 +108,6 @@
 			margin-top: 2em;
 		}
 
-		h1 {
-			font-weight: 600;
-			border-bottom: solid 2px white;
-			width: max-content;
-			margin: 0 auto 0.5em auto;
-		}
-
 		#header {
 			max-width: 1000px;
 			margin: 0 auto;
@@ -134,9 +117,16 @@
 		}
 
 		article {
-			border: solid 2px grey;
+			border: solid 2px #add8e6;
 			border-radius: 2em;
 			margin-bottom: 4em;
+
+			a {
+				strong {
+					color: #add8e6;
+					text-decoration: underline;
+				}
+			}
 
 			h2 {
 				padding: 0 0 0 0.5em;

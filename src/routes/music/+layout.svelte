@@ -19,6 +19,7 @@
 		margin: 2em;
 		text-align: center;
 		font-weight: bold;
+		color: var(--accent);
 		
 		ul {
 			display: flex;
@@ -26,13 +27,17 @@
 			padding: 0;
 			gap: 1em;
 			li {
-				border: solid 1px white;
+				border: solid 1px var(--accent);
 				border-radius: 1em;
 				width: max-content;
 				padding: 0.5em;
 			}
 			.active {
-				background: grey;
+				background: var(--accent);
+				color: var(--black);
+			}
+
+			.active :hover {
 				color: var(--black);
 			}
 		}

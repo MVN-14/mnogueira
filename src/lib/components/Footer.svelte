@@ -18,7 +18,10 @@
 		<ul id="menu">
 			{#each menuItems as item}
 				<li>
-				<a href={item.href} target={item.target ? "_blank" : "_self"}>
+					<a
+						href={item.href}
+						target={item.target ? "_blank" : "_self"}
+					>
 						{#if item.icon}
 							<icon class={"nf " + item.icon}></icon>
 						{/if}
@@ -32,13 +35,13 @@
 
 <style>
 	footer {
-		border-top: 1px solid var(--text);
+		border-top: 1px solid var(--accent);
 		max-width: 1200px;
 		margin: 2em auto 0 auto;
 		display: flex;
 		justify-content: center;
 		gap: 2em;
-		padding: 0.5em 2em;
+		padding: 1em 0;
 
 		.title {
 			font-weight: 500;
