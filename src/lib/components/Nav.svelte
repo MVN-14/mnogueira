@@ -6,12 +6,17 @@
 
 <nav>
 	<ul>
-		<li>
+		<li class:active={page.route.id == ("/")}>
 			<a href="/"><strong>MNogueira</strong></a>
 		</li>
 		{#each menuItems as item}
 			<li class:active={page.route.id?.includes(item.activeMatch)}>
-				<a href={item.href}>{item.text}</a>
+				<a href={item.href} target={item.target ? "_blank" : "_self"}>
+					{#if item.icon}
+						<icon class={"nf " + item.icon}></icon>
+					{/if}
+					{item.text}
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -21,12 +26,16 @@
 	nav {
 		font-size: 1.2em;
 		border-bottom: 1px solid var(--text);
+		display: flex;
+		justify-content: center;
+		font-weight: 500;
 
 		ul {
 			padding: 0;
 			margin: 0;
 			display: flex;
 			gap: 1em;
+			justify-items: center;
 
 			li {
 				padding: 0.3em;

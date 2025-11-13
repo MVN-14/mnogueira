@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { page } from "$app/state";
-
 	let { menuItems } = $props();
 </script>
 
@@ -20,10 +18,12 @@
 		<ul id="menu">
 			{#each menuItems as item}
 				<li>
-					<a
-						class:active={page.route.id?.includes(item.activeMatch)}
-						href={item.href}>{item.text}</a
-					>
+				<a href={item.href} target={item.target ? "_blank" : "_self"}>
+						{#if item.icon}
+							<icon class={"nf " + item.icon}></icon>
+						{/if}
+						{item.text}
+					</a>
 				</li>
 			{/each}
 		</ul>

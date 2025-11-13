@@ -6,7 +6,7 @@
 	import "../app.css";
 
 	import Nav from "$lib/components/Nav.svelte";
-    import Footer from "$lib/components/Footer.svelte";
+	import Footer from "$lib/components/Footer.svelte";
 
 	let { children } = $props();
 
@@ -20,6 +20,12 @@
 			text: "Projects",
 			href: "/projects",
 			activeMatch: "projects",
+		},
+		{
+			text: "Github",
+			href: "https://github.com/MVN-14",
+			icon: "nf-cod-github",
+			target: "_blank"
 		},
 	];
 </script>
@@ -44,6 +50,4 @@
 	#pageContainer {
 		min-height: 80vh;
 	}
-
-
 </style>
