@@ -6,12 +6,15 @@
 	<div>
 		<p class="title">Contact Me:</p>
 		<div id="contact">
-			<a href="mailto:michael@mnogueira.ca"
-				><icon class="nf nf-md-email"></icon>michael@mnogueira.ca</a
-			>
-			<a href="tel:2266268849"
-				><icon class="nf nf-fa-mobile_phone"></icon>226-626-8849</a
-			>
+			<a href="mailto:michael@mnogueira.ca">
+				<icon class="nf nf-md-email"></icon>michael@mnogueira.ca
+			</a>
+			<a href="tel:2266268849">
+				<icon class="nf nf-fa-mobile_phone"></icon>226-626-8849
+			</a>
+			<a href="https://www.linkedin.com/in/michaelnogueira/">
+				<icon class="nf nf-fa-linkedin"></icon>LinkedIn
+			</a>
 		</div>
 	</div>
 	<div>
@@ -35,18 +38,20 @@
 
 <style>
 	footer {
+		color: var(--accent);
 		border-top: 1px solid var(--accent);
 		max-width: 1200px;
 		margin: 2em auto 0 auto;
 		display: flex;
 		justify-content: center;
 		gap: 2em;
-		padding: 1em 0;
+		padding: 1em;
 
 		.title {
 			font-weight: 500;
 			font-size: 1.5em;
 			margin: 0;
+			color: var(--text);
 		}
 
 		#contact {
@@ -65,7 +70,8 @@
 			display: flex;
 			flex-direction: column;
 			gap: 0.5em;
-			margin-top: 2.5em;
+			margin: 2.5em 0 0 0;
+			padding: 0;
 
 			.active {
 				font-weight: bold;
