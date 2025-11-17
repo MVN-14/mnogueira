@@ -26,11 +26,13 @@
 			justify-content: center;
 			padding: 0;
 			gap: 1em;
+
 			li {
 				border: solid 1px var(--accent);
 				border-radius: 1em;
 				width: max-content;
 				padding: 0.5em;
+				font-size: clamp(14px, 3vw, 1em)
 			}
 			.active {
 				background: var(--accent);

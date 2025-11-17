@@ -8,94 +8,142 @@
 
 	<p id="info">
 		I love to tinker with my own tools and projects to keep learning and
-		solve specific problems I encounter while writing code. 
+		solve specific problems I encounter while writing code.
 	</p>
 
-	<ul id="projectList">
-		<li>
-			<div class="projectInfo">
-				<p class="link">
-					<a href="https://webgames.mnogueira.ca" target="_blank"
-						><strong>Web Games</strong></a
-					>
-					<br />
-					<a
-						class="projectLink"
-						href="https://github.com/MVN-14/web-games"
-						aria-label="Github"
-						><icon class="nf nf-dev-github"></icon></a
-					>
-					|
-					<a
-						class="projectLink"
-						href="https://webgames.mnogueira.ca"
-						target="_blank"
-						aria-label="website"
-						><icon class="nf nf-md-web"></icon></a
-					>
-				</p>
-				<p>
-					This is a collection of webgames written with pure js web
-					components to learn how to use vanilla web components. <br
-					/>
-					<strong>
-						Current games - tic tac toe, wordle, and snake
-					</strong>
-				</p>
-			</div>
-		</li>
+	<div id="projects">
+		<div class="project">
+			<h2 class="projectTitle">
+				Web Games <br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/web-games"
+					aria-label="Github"
+					><icon class="nf nf-dev-github"></icon></a
+				>
+				|
+				<a
+					class="projectLink"
+					href="https://webgames.mnogueira.ca"
+					target="_blank"
+					aria-label="website"><icon class="nf nf-md-web"></icon></a
+				>
+			</h2>
+			<p>
+				This is a collection of webgames written with pure js web
+				components to learn how to use vanilla web components. <br />
+				<strong>
+					Current games - tic tac toe, wordle, and snake
+				</strong>
+			</p>
+		</div>
 
-		<li>
-			<div class="projectInfo">
-				<p class="link">
-					<a
-						href="https://github.com/MVN-14/create-wx-app"
-						target="_blank"><strong>create-wx-app</strong></a
-					>
-					<br />
-					<a
-						class="projectLink"
-						href="https://github.com/MVN-14/create-wx-app"
-						aria-label="Github"
-						><icon class="nf nf-dev-github"></icon></a
-					>
-				</p>
-				<p>
-					A C++ program to spin up a basic wxWidgets Hello World app
-					with a CMake build system.
-				</p>
-			</div>
-		</li>
+		<div class="project">
+			<h2 class="projectTitle">
+				create-wx-app <br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/create-wx-app"
+					aria-label="Github"
+					><icon class="nf nf-dev-github"></icon></a
+				>
+			</h2>
+			<p>
+				A C++ program to spin up a basic wxWidgets Hello World app with
+				a CMake build system.
+			</p>
+		</div>
 
-		<li>
-			<div class="projectInfo">
-				<p class="link">
-					<a href="https://cah.mnogueira.ca" target="_blank"
-						><strong>Clone Against Humanity</strong></a
-					>
-					<br />
-					<a
-						class="projectLink"
-						href="https://github.com/MVN-14/CAHClient"
-						aria-label="Github"
-						><icon class="nf nf-dev-github"></icon></a
-					>
-					|
-					<a
-						class="projectLink"
-						href="https://cah.mnogueira.ca"
-						target="_blank"
-						aria-label="website"
-						><icon class="nf nf-md-web"></icon></a
-					>
-				</p>
-				<p>
-					A Multiplayer Cards Against Humanity clone to learn
-					websockets and practice client/server communication
-				</p>
-			</div>
-		</li>
-	</ul>
+		<div class="project">
+			<h2 class="projectTitle">
+				Clone Against Humanity <br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/CAHClient"
+					aria-label="Github"
+					><icon class="nf nf-dev-github"></icon></a
+				>
+				|
+				<a
+					class="projectLink"
+					href="https://cah.mnogueira.ca"
+					target="_blank"
+					aria-label="website"><icon class="nf nf-md-web"></icon></a
+				>
+			</h2>
+			<p>
+				A Multiplayer Cards Against Humanity clone to learn websockets
+				and practice client/server communication
+			</p>
+		</div>
+
+		<div class="project">
+			<h2 class="projectTitle">
+				i3 Blocks Go<br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/i3blocks-go"
+					aria-label="Github"
+					target="_blank"><icon class="nf nf-dev-github"></icon></a
+				>
+			</h2>
+			<p>
+				This is a collection of go scripts that output i3blocks for
+				i3wm's i3bar. <br /> <br />
+				<strong>
+					blocks inculded: <br />
+				</strong>
+				battery, date, time, nordvpn, spotify, volume
+			</p>
+		</div>
+
+		<div class="project">
+			<h2 class="projectTitle">
+				PangGo <br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/panggo"
+					aria-label="Github"
+					target="_blank"><icon class="nf nf-dev-github"></icon></a
+				>
+			</h2>
+			<p>
+				This is a Go library I created to create a PowerLine style
+				i3-bar for i3wm, it currently only supports generating pango
+				span elements and powerline elements
+			</p>
+		</div>
+
+		<div class="project">
+			<h2 class="projectTitle">
+				CTools-Nvim<br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/ctools-nvim"
+					aria-label="Github"
+					target="_blank"><icon class="nf nf-dev-github"></icon></a
+				>
+			</h2>
+			<p>
+				This is a neovim plugin that provides quick file switching
+				between C/C++ source and header files
+			</p>
+		</div>
+
+		<div class="project">
+			<h2 class="projectTitle">
+				Nvim-Commenter<br />
+				<a
+					class="projectLink"
+					href="https://github.com/MVN-14/ctools-nvim"
+					aria-label="Github"
+					target="_blank"><icon class="nf nf-dev-github"></icon></a
+				>
+			</h2>
+			<p>
+			This is a neovim plugin that provides configurable keymaps for commenting code			</p>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -110,11 +158,11 @@
 			h1 {
 				font-size: 2.5em;
 				margin: 0;
-				color: var(--accent);
 			}
 
 			a {
 				font-size: 1.2em;
+				color: var(--accent);
 			}
 		}
 
@@ -126,33 +174,27 @@
 			padding: 0 1em 2em 1em;
 		}
 
-		#projectList {
-			padding: 2em;
-			max-width: 800px;
-			margin: 0 auto;
-			border: solid 1px var(--accent);
-			border-radius: 2em;
-			align-items: center;
+		#projects {
 			display: flex;
-			flex-direction: column;
-			gap: 3em;
+			gap: 2em;
+			flex-wrap: wrap;
+			justify-content: center;
 
-			.projectInfo {
-				display: flex;
-				.link {
-					font-size: 1.5em;
-					min-width: 40vw;
+			.project {
+				.projectTitle {
 					color: var(--accent);
+					font-size: clamp(1.4em, 2vw, 1.8em);
 				}
+
+				border: 1px solid var(--accent);
+				border-radius: 2em;
+				padding: 1em;
+				text-align: center;
+				max-width: 400px;
+
 				p {
-					margin: 0;
 					font-size: 1.2em;
 				}
-			}
-
-			.projectLink {
-				font-size: 1em;
-				color: var(--accent);
 			}
 		}
 	}
