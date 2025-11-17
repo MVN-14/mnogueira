@@ -24,7 +24,7 @@
 
 <style>
 	nav {
-		font-size: 1.2em;
+		font-size: clamp(1em, 3vw, 1.2em);
 		border-bottom: 1px solid #add8e6;
 		display: flex;
 		justify-content: center;
