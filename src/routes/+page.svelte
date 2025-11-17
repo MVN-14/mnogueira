@@ -47,7 +47,7 @@
 	</article>
 
 	<article>
-		<h2>Tech I Use</h2>
+		<h2>Tech I Like</h2>
 		<ul>
 			<li>
 				<p>
@@ -107,6 +107,7 @@
 		img {
 			margin-top: 2em;
 		}
+
 
 		#header {
 			max-width: 1000px;
